@@ -12,6 +12,7 @@
     <section class="page-header">
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+      <a href="/" class="btn">Home</a>
       <a href="/blog.html" class="btn">Blog</a>
       <a href="{{ site.book_url }}" class="btn">Book</a>
       <a href="{{ site.github_org_url }}" class="btn">GitHub</a>
@@ -21,7 +22,7 @@
       {{ content }}
 
       <footer class="site-footer">
-        <span class="site-footer-credits">© 2019 Valentine Valyaeff</span>
+        <a class="site-footer-credits" href="https://github.com/valff">© 2019 Valentine Valyaeff</a>
       </footer>
     </section>
 
