@@ -1,1 +1,9 @@
+title: Drone
+description: >-
+  An Embedded Operating System for writing real-time applications in Rust.
+book_url: https://book.drone-os.com
+github_org_url: https://github.com/drone-os
+
 theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
