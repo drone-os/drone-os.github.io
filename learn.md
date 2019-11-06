@@ -11,19 +11,28 @@ For guide-level documentation there is [The Drone Book](https://book.drone-os.co
 Drone is split into multiple crates:
 
 **drone-core**
-[0.10 (latest)](https://api.drone-os.com/drone-core/0.10/)
+[0.10](https://api.drone-os.com/drone-core/0.10/)
+[0.11 (latest)](https://api.drone-os.com/drone-core/0.11/)
 
 The foundational crate. It contains functionality shared by all platforms.
 
 **drone-cortex-m**
-[0.10 (latest)](https://api.drone-os.com/drone-cortex-m/0.10/)
+[0.10](https://api.drone-os.com/drone-cortex-m/0.10/)
+[0.11 (latest)](https://api.drone-os.com/drone-cortex-m/0.11/)
 
 ARM® Cortex®-M platform crate.
 
 **drone-stm32-map**
-[0.10 (latest)](https://api.drone-os.com/drone-stm32-map/0.10/)
+[0.10](https://api.drone-os.com/drone-stm32-map/0.10/)
+[0.11 (latest)](https://api.drone-os.com/drone-stm32-map/0.11/)
 
 STM32 peripheral mappings auto-generated from vendor-provided SVD files.
+
+**drone-nrf-map**
+[0.11 (latest)](https://api.drone-os.com/drone-nrf-map/0.11/)
+
+Nordic Semi nRFx peripheral mappings auto-generated from vendor-provided SVD
+files.
 
 ## CLI utility
 

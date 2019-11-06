@@ -11,9 +11,9 @@ performance into the world of embedded programming.
 Drone core is platform-agnostic from the beginning. However currently only ARM®
 Cortex®-M3/M4 is supported.
 
-Drone also have special support for [Black Magic Probe](http://black-magic.org/)
-in form of `drone bmp` commands. But it doesn't restrict you from using any
-other debug probes.
+Drone provides a unified command-line interface to debug probes. Currently
+supported debuggers are [Black Magic Probe](http://black-magic.org/) and
+[OpenOCD](http://openocd.org/).
 
 # Design principles
 
