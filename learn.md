@@ -12,24 +12,28 @@ Drone is split into multiple crates:
 
 **drone-core**
 [0.10](https://api.drone-os.com/drone-core/0.10/)
-[0.11 (latest)](https://api.drone-os.com/drone-core/0.11/)
+[0.11](https://api.drone-os.com/drone-core/0.11/)
+[0.12 (latest)](https://api.drone-os.com/drone-core/0.12/)
 
 The foundational crate. It contains functionality shared by all platforms.
 
-**drone-cortex-m**
+**drone-cortexm**
 [0.10](https://api.drone-os.com/drone-cortex-m/0.10/)
-[0.11 (latest)](https://api.drone-os.com/drone-cortex-m/0.11/)
+[0.11](https://api.drone-os.com/drone-cortex-m/0.11/)
+[0.12 (latest)](https://api.drone-os.com/drone-cortexm/0.12/)
 
 ARM® Cortex®-M platform crate.
 
 **drone-stm32-map**
 [0.10](https://api.drone-os.com/drone-stm32-map/0.10/)
-[0.11 (latest)](https://api.drone-os.com/drone-stm32-map/0.11/)
+[0.11](https://api.drone-os.com/drone-stm32-map/0.11/)
+[0.12 (latest)](https://api.drone-os.com/drone-stm32-map/0.12/)
 
 STM32 peripheral mappings auto-generated from vendor-provided SVD files.
 
 **drone-nrf-map**
-[0.11 (latest)](https://api.drone-os.com/drone-nrf-map/0.11/)
+[0.11](https://api.drone-os.com/drone-nrf-map/0.11/)
+[0.12 (latest)](https://api.drone-os.com/drone-nrf-map/0.12/)
 
 Nordic Semi nRFx peripheral mappings auto-generated from vendor-provided SVD
 files.
