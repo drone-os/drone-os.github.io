@@ -21,3 +21,7 @@ This page contains links to open-source programs that use Drone OS.
 * <https://github.com/dhylands/drone-weact-blinky>
 
    Blinky example for Drone on a **WeACT STM32F411CEU6**.
+
+* <https://github.com/dhylands/drone-bitsy-blinky>
+
+   Blinky example for Drone on a **1Bitsy**.
