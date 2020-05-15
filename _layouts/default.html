@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    {% if site.google_analytics %}
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <head>
+        {% if site.google_analytics %}
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
 
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
+                gtag('config', '{{ site.google_analytics }}');
+            </script>
+        {% endif %}
 
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
 
 {% seo %}
 {% feed_meta %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-      <a href="/" class="btn">Home</a>
-      <a href="/blog.html" class="btn">Blog</a>
-      <a href="/learn.html" class="btn">Learn</a>
-      <a href="/community.html" class="btn">Community</a>
-      <a href="/projects.html" class="btn">Projects</a>
-    </section>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#157878">
+        <link rel="stylesheet" href="{{ '/assets/css/main.css?v=' | append: site.github.build_revision | relative_url }}">
+        <script async src="{{ '/assets/js/main.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    </head>
+    <body>
+        <section class="page-header">
+            <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+            <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+            <a href="/" class="btn">Home</a>
+            <a href="/blog.html" class="btn">Blog</a>
+            <a href="/learn.html" class="btn">Learn</a>
+            <a href="/community.html" class="btn">Community</a>
+            <a href="/projects.html" class="btn">Projects</a>
+        </section>
 
-    <section class="main-content">
-      {{ content }}
+        <section class="main-content">
+            {{ content }}
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/drone-os">Drone OS</a> is maintained by <a href="https://github.com/valff">Valentine Valyaeff (valff)</a>.</span>
-        <a href="https://github.com/drone-os/drone-os.github.io/blob/master/{{ page.path }}">Edit this page on GitHub.</a>
-      </footer>
-    </section>
-  </body>
+            <footer class="site-footer">
+                <span class="site-footer-owner"><a href="https://github.com/drone-os">Drone OS</a> is maintained by <a href="https://github.com/valff">Valentine Valyaeff (valff)</a>.</span>
+                <a href="https://github.com/drone-os/drone-os.github.io/blob/master/{{ page.path }}">Edit this page on GitHub.</a>
+            </footer>
+        </section>
+    </body>
 </html>

@@ -1,0 +1,30 @@
+<span class="f4 b">$</span> <span class="f9">just features=heaptrace flash</span>
+<hr /><span class="f4 b">$</span> <span class="f9">just heaptrace</span>
+<hr /><span class="f9">^C</span>
+<span class="f4 b">$</span> <span class="f9">drone heap generate --pools 8</span>
+ <span class="b">Block Size</span> | <span class="b">Max Load</span> | <span class="b">Total Allocations</span>
+------------+----------+-------------------
+          1 |        7 |                 7
+          8 |        3 |               748
+         12 |       11 |               756
+         28 |        3 |               748
+         56 |        1 |                87
+         68 |        1 |               220
+        128 |        1 |                 1
+        152 |        1 |                 1
+
+Maximum heap load: <span class="b">651 / 1.99%</span>
+
+<span class="f6 b">=============================== OPTIMIZED LAYOUT ===============================</span>
+[heap]
+size = "32K"
+pools = [
+    { block = "4", capacity = 522 },
+    { block = "12", capacity = 515 },
+    { block = "28", capacity = 289 },
+    { block = "56", capacity = 143 },
+    { block = "68", capacity = 90 },
+    { block = "152", capacity = 15 },
+]
+# fragmentation: <span class="b">36 / 0.11%</span>
+# <span class="f6 b">hint</span>: replace the existing [heap] section in Drone.toml

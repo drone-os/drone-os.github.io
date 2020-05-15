@@ -1,0 +1,35 @@
+<span class="f4 b">$</span> <span class="f9">drone new --toolchain nightly-2020-04-30 --probe bmp --device stm32f103 --flash-size 128K --ram-size 20K hello-world</span>
+     <span class="f2 b">Created</span> binary (application) `hello-world` package
+     <span class="f2 b">Removed</span> src/main.rs
+     <span class="f2 b">Created</span> src/bin.rs
+     <span class="f2 b">Created</span> src/lib.rs
+     <span class="f2 b">Created</span> src/thr.rs
+     <span class="f2 b">Created</span> src/tasks/mod.rs
+     <span class="f2 b">Created</span> src/tasks/root.rs
+     <span class="f2 b">Patched</span> Cargo.toml
+     <span class="f2 b">Created</span> Drone.toml
+     <span class="f2 b">Created</span> Justfile
+     <span class="f2 b">Created</span> rust-toolchain
+     <span class="f2 b">Created</span> .cargo/config
+     <span class="f2 b">Patched</span> .gitignore
+<span class="f4 b">$</span> <span class="f9">cd hello-world</span>
+<span class="f4 b">$</span> <span class="f9">just deps</span>
+<span class="b">rustup target add thumbv7m-none-eabi</span>
+<span class="b">info:</span> downloading component 'rust-std' for 'thumbv7m-none-eabi'
+<span class="b">info:</span> installing component 'rust-std' for 'thumbv7m-none-eabi'
+<hr /><span class="f4 b">$</span> <span class="f9">just flash</span>
+<span class="b">drone env thumbv7m-none-eabi -- cargo build --features "" --release</span>
+    <span class="f2 b">Updating</span> crates.io index
+   <span class="f2 b">Compiling</span> proc-macro2 v1.0.12
+   <span class="f2 b">Compiling</span> unicode-xid v0.2.0
+   <span class="f2 b">Compiling</span> syn v1.0.21
+   <span class="f2 b">Compiling</span> serde v1.0.110
+<hr />   <span class="f2 b">Compiling</span> hello-world v0.1.0 (/home/valff/hello-world)
+    <span class="f2 b">Finished</span> release [optimized + debuginfo] target(s) in 1m 20s
+<span class="b">drone flash target/thumbv7m-none-eabi/release/hello-world</span>
+<hr />Start address 0x8000040, load size 6712
+Transfer rate: 15 KB/sec, 745 bytes/write.
+<hr /><span class="f4 b">$</span> <span class="f9">just log</span>
+<span class="b">drone log --reset :0:1</span>
+<hr /><span class="f6 b">================================== LOG OUTPUT ==================================</span>
+Hello, world!

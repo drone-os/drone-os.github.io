@@ -1,8 +1,8 @@
 title: Drone
 description: >-
-  An Embedded Operating System for writing real-time applications in Rust.
+    An Embedded Operating System for writing real-time applications in Rust.
 google_analytics: UA-148590307-1
 
 theme: jekyll-theme-cayman
 plugins:
-  - jekyll-feed
+- jekyll-feed
