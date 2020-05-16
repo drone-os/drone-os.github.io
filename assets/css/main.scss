@@ -6,11 +6,30 @@ $header-bg-color-secondary: #49a09d;
 
 @import "{{ site.theme }}";
 
+.quick-tour {
+    border-radius: 0.3rem;
+    border: solid 1px #dcf0eb;
+    background-color: #f3faf6;
+
+    p {
+        margin: 1em 40px;
+    }
+
+    pre {
+        background-color: white;
+    }
+
+    code {
+        background-color: white;
+    }
+}
+
 .quick-tour-tabs {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    padding: 0;
+    margin: 0;
+    padding: 1em 40px;
 
     li {
         flex: 1 1 auto;
@@ -25,8 +44,8 @@ $header-bg-color-secondary: #49a09d;
         border: solid 1px transparent;
 
         &.active {
-            background-color: $code-bg-color;
-            border-color: $border-color;
+            background-color: white;
+            border-color: #dcf0eb;
 
             &:focus {
                 outline: none;

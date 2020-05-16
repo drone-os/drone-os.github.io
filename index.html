@@ -10,101 +10,103 @@ layout: default
 
 <h1>Quick Tour</h2>
 
-<ul class="quick-tour-tabs">
-    <li><a href="#templates" class="item active">Getting Started</a></li>
-    <li><a href="#async_await" class="item">Async/Await</a></li>
-    <li><a href="#heap" class="item">Dynamic Memory</a></li>
-    <li><a href="#registers" class="item">Memory-Mapped Registers</a></li>
-    <li><a href="#threads" class="item">Threads</a></li>
-    <li><a href="#peripherals" class="item">Generic Peripherals</a></li>
-    <li><a href="#log" class="item">Logging</a></li>
-    <li><a href="#safety" class="item">Safety</a></li>
-</ul>
-<div class="quick-tour-content">
-    <div id="templates" class="quick-tour-block active">
-        <p>
-            <code>cargo</code> takes development comfort to the next level, and
-            Drone extends its philosophy to the embedded world. If your target
-            chip and debug probe are supported by Drone, you can flash your
-            first program and get a feedback right away!
-        </p>
-        <pre class="solarized">{% include templates %}</pre>
-    </div>
-    <div id="async_await" class="quick-tour-block">
-        <p>
-            Each interrupt is an executor for <code>async</code> tasks. Thanks
-            to Rust's zero-cost asynchronous programming your interrupt handlers
-            look like a conventional synchronous code, except they don't need
-            separate stacks.
-        </p>
-        {% highlight rust %}{% include async_await.rs %}{% endhighlight %}
-    </div>
-    <div id="heap" class="quick-tour-block">
-        <p>
-            Drone includes a dynamic memory allocator that allows you to use
-            familiar
-            Rust's <code>Box</code>, <code>Vec</code>, <code>String</code>, <code>Arc</code>,
-            and other dynamic types. It is lock-free, deterministic, and has a
-            small code footprint, which makes it useful even on simplest
-            micro-controllers. The cost is that it requires tuning for each
-            particular application. Drone automates this by providing utilities
-            for collecting real-time allocator statistics and calculating an
-            optimized layout configuration.
-        </p>
-        <pre class="solarized">{% include heap %}</pre>
-    </div>
-    <div id="registers" class="quick-tour-block">
-        <p>
-            Drone provides a rich API for working safely with memory-mapped
-            registers. An application starts with a set of zero-sized unique
-            tokens for all available registers. A token can have move or copy
-            semantics, can be shareable with atomic access or non-shareable with
-            non-atomic access, can be split into individual register field
-            tokens.
-        </p>
-        {% highlight rust %}{% include registers.rs %}{% endhighlight %}
-    </div>
-    <div id="threads" class="quick-tour-block">
-        <p>
-            Drone uses interrupt-based preemptive priority scheduling, where
-            tasks with same priorities are executed cooperatively. An
-            application has a predefined number of threads corresponding to
-            hardware interrupts, but each thread can run dynamic number of
-            fibers.
-        </p>
-        {% highlight rust %}{% include threads.rs %}{% endhighlight %}
-    </div>
-    <div id="peripherals" class="quick-tour-block">
-        <p>
-            Registers and individual register fields can be grouped into
-            peripheral blocks. Drone makes a great effort to abstract from
-            different instances of one peripheral type. Even if these instances
-            have minor differences.
-        </p>
-        {% highlight rust %}{% include peripherals.rs %}{% endhighlight %}
-    </div>
-    <div id="log" class="quick-tour-block">
-        <p>
-            Drone provides an abstract logging facade designed after ARM Serial
-            Wire Output. The output can be captured with a generic USB-UART
-            adapter. It has 32 multiplexed streams and supports atomic packets
-            up to 4 bytes. Familiar Rust macros
-            like <code>print!</code>, <code>eprint!</code>, <code>dbg!</code>
-            are mapped to reserved #0 and #1 ports that work as standard output
-            and standard error respectively.
-        </p>
-        {% highlight rust %}{% include log.rs %}{% endhighlight %}
-    </div>
-    <div id="safety" class="quick-tour-block">
-        <p>
-            Drone provides safe API for inherently unsafe low-level
-            operations. The only required unsafe function is the entry-point
-            located at <code>src/bin.rs</code>, which is a separate compilation
-            unit. You can even write a whole micro-controller firmware
-            with <code>#![forbid(unsafe_code)]</code> at the top
-            of <code>src/lib.rs</code>.
-        </p>
-        {% highlight rust %}{% include safety.rs %}{% endhighlight %}
+<div class="quick-tour">
+    <ul class="quick-tour-tabs">
+        <li><a href="#templates" class="item active">Getting Started</a></li>
+        <li><a href="#async_await" class="item">Async/Await</a></li>
+        <li><a href="#heap" class="item">Dynamic Memory</a></li>
+        <li><a href="#registers" class="item">Memory-Mapped Registers</a></li>
+        <li><a href="#threads" class="item">Threads</a></li>
+        <li><a href="#peripherals" class="item">Generic Peripherals</a></li>
+        <li><a href="#log" class="item">Logging</a></li>
+        <li><a href="#safety" class="item">Safety</a></li>
+    </ul>
+    <div class="quick-tour-content">
+        <div id="templates" class="quick-tour-block active">
+            <p>
+                <code>cargo</code> takes development comfort to the next level,
+                and Drone extends its philosophy to the embedded world. If your
+                target chip and debug probe are supported by Drone, you can
+                flash your first program and get a feedback right away!
+            </p>
+            <figure class="highlight"><pre class="solarized">{% include templates %}</pre></figure>
+        </div>
+        <div id="async_await" class="quick-tour-block">
+            <p>
+                Each interrupt is an executor for <code>async</code>
+                tasks. Thanks to Rust's zero-cost asynchronous programming your
+                interrupt handlers look like a conventional synchronous code,
+                except they don't need separate stacks.
+            </p>
+            {% highlight rust %}{% include async_await.rs %}{% endhighlight %}
+        </div>
+        <div id="heap" class="quick-tour-block">
+            <p>
+                Drone includes a dynamic memory allocator that allows you to use
+                familiar
+                Rust's <code>Box</code>, <code>Vec</code>, <code>String</code>, <code>Arc</code>,
+                and other dynamic types. It is lock-free, deterministic, and has
+                a small code footprint, which makes it useful even on simplest
+                micro-controllers. The cost is that it requires tuning for each
+                particular application. Drone automates this by providing
+                utilities for collecting real-time allocator statistics and
+                calculating an optimized layout configuration.
+            </p>
+            <figure class="highlight"><pre class="solarized">{% include heap %}</pre></figure>
+        </div>
+        <div id="registers" class="quick-tour-block">
+            <p>
+                Drone provides a rich API for working safely with memory-mapped
+                registers. An application starts with a set of zero-sized unique
+                tokens for all available registers. A token can have move or
+                copy semantics, can be shareable with atomic access or
+                non-shareable with non-atomic access, can be split into
+                individual register field tokens.
+            </p>
+            {% highlight rust %}{% include registers.rs %}{% endhighlight %}
+        </div>
+        <div id="threads" class="quick-tour-block">
+            <p>
+                Drone uses interrupt-based preemptive priority scheduling, where
+                tasks with same priorities are executed cooperatively. An
+                application has a predefined number of threads corresponding to
+                hardware interrupts, but each thread can run dynamic number of
+                fibers.
+            </p>
+            {% highlight rust %}{% include threads.rs %}{% endhighlight %}
+        </div>
+        <div id="peripherals" class="quick-tour-block">
+            <p>
+                Registers and individual register fields can be grouped into
+                peripheral blocks. Drone makes a great effort to abstract from
+                different instances of one peripheral type. Even if these
+                instances have minor differences.
+            </p>
+            {% highlight rust %}{% include peripherals.rs %}{% endhighlight %}
+        </div>
+        <div id="log" class="quick-tour-block">
+            <p>
+                Drone provides an abstract logging facade designed after ARM
+                Serial Wire Output. The output can be captured with a generic
+                USB-UART adapter. It has 32 multiplexed streams and supports
+                atomic packets up to 4 bytes. Familiar Rust macros
+                like <code>print!</code>, <code>eprint!</code>, <code>dbg!</code>
+                are mapped to reserved #0 and #1 ports that work as standard
+                output and standard error respectively.
+            </p>
+            {% highlight rust %}{% include log.rs %}{% endhighlight %}
+        </div>
+        <div id="safety" class="quick-tour-block">
+            <p>
+                Drone provides safe API for inherently unsafe low-level
+                operations. The only required unsafe function is the entry-point
+                located at <code>src/bin.rs</code>, which is a separate
+                compilation unit. You can even write a whole micro-controller
+                firmware with <code>#![forbid(unsafe_code)]</code> at the top
+                of <code>src/lib.rs</code>.
+            </p>
+            {% highlight rust %}{% include safety.rs %}{% endhighlight %}
+        </div>
     </div>
 </div>
 

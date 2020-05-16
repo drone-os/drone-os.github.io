@@ -1,6 +1,6 @@
 use drone_cortexm::reg::prelude::*;
 use drone_stm32_map::periph::gpio::{
-    periph_gpio_a3,
+    periph_gpio_a3, periph_gpio_b14,
     pin::{GpioPinMap, GpioPinPeriph},
 };
 
@@ -29,4 +29,7 @@ impl<T: GpioPinMap> LoadSwitch<T> {
 
 pub fn handler(reg: Regs) {
     let sd_card_switch = LoadSwitch::init(periph_gpio_a3!(reg));
+    let ble_switch = LoadSwitch::new(periph_gpio_b14!(reg));
+    sd_card_switch.on();
+    ble_switch.on();
 }
