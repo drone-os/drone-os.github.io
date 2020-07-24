@@ -25,3 +25,8 @@ This page contains links to open-source programs that use Drone OS.
 * <https://github.com/dhylands/drone-bitsy-blinky>
 
    Blinky example for Drone on a **1Bitsy**.
+
+* <https://github.com/centosa/stm32-nucleo>
+
+  Dynamic clock-tree configuration on **Nucleo STM32L496** and **STM32L4R5**.\
+  Example of macro futures::select_biased to set up an async multi-stream listener.
