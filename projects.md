@@ -28,5 +28,10 @@ This page contains links to open-source programs that use Drone OS.
 
 * <https://github.com/centosa/stm32-nucleo>
 
-  Dynamic clock-tree configuration on **Nucleo STM32L496** and **STM32L4R5**.\
+  Dynamic clock-tree configuration on **Nucleo STM32L496** and **STM32L4R5**.
   Example of macro futures::select_biased to set up an async multi-stream listener.
+
+* <https://github.com/centosa/cc2538-starter>
+
+  The Drone-OS toolchain setup for **Texas Instruments CC2538** System-on-Chip Solution for 2.4-GHz IEEE 802.15.4 and ZigBee®/ZigBee IP® Applications.
+  Included is a Drone-DSO (Drone Serial Logger) for logging over UART->USB adapter (CC2538 has no SWO).
