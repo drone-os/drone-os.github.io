@@ -14,7 +14,8 @@ Drone is split into multiple crates:
 [0.10](https://api.drone-os.com/drone-core/0.10/)
 [0.11](https://api.drone-os.com/drone-core/0.11/)
 [0.12](https://api.drone-os.com/drone-core/0.12/)
-[0.13 (latest)](https://api.drone-os.com/drone-core/0.13/)
+[0.13](https://api.drone-os.com/drone-core/0.13/)
+[0.14 (latest)](https://api.drone-os.com/drone-core/0.14/)
 
 The foundational crate. It contains functionality shared by all platforms.
 
@@ -22,22 +23,30 @@ The foundational crate. It contains functionality shared by all platforms.
 [0.10](https://api.drone-os.com/drone-cortex-m/0.10/)
 [0.11](https://api.drone-os.com/drone-cortex-m/0.11/)
 [0.12](https://api.drone-os.com/drone-cortexm/0.12/)
-[0.13 (latest)](https://api.drone-os.com/drone-cortexm/0.13/)
+[0.13](https://api.drone-os.com/drone-cortexm/0.13/)
+[0.14 (latest)](https://api.drone-os.com/drone-cortexm/0.14/)
 
 ARM® Cortex®-M platform crate.
+
+**drone-riscv**
+[0.14 (latest)](https://api.drone-os.com/drone-riscv/0.14/)
+
+RISC-V platform crate.
 
 **drone-stm32-map**
 [0.10](https://api.drone-os.com/drone-stm32-map/0.10/)
 [0.11](https://api.drone-os.com/drone-stm32-map/0.11/)
 [0.12](https://api.drone-os.com/drone-stm32-map/0.12/)
-[0.13 (latest)](https://api.drone-os.com/drone-stm32-map/0.13/)
+[0.13](https://api.drone-os.com/drone-stm32-map/0.13/)
+[0.14 (latest)](https://api.drone-os.com/drone-stm32-map/0.14/)
 
 STM32 peripheral mappings auto-generated from vendor-provided SVD files.
 
 **drone-nrf-map**
 [0.11](https://api.drone-os.com/drone-nrf-map/0.11/)
 [0.12](https://api.drone-os.com/drone-nrf-map/0.12/)
-[0.13 (latest)](https://api.drone-os.com/drone-nrf-map/0.13/)
+[0.13](https://api.drone-os.com/drone-nrf-map/0.13/)
+[0.14 (latest)](https://api.drone-os.com/drone-nrf-map/0.14/)
 
 Nordic Semi nRFx peripheral mappings auto-generated from vendor-provided SVD
 files.

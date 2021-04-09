@@ -16,6 +16,10 @@ This page contains links to open-source programs that use Drone OS.
 
     A demonstration program for **nRF9160 DK** board.
 
+* <https://github.com/drone-os/longan-blink>
+
+    A demonstration program for **Longan Nano** board.
+
 ## Community Demos
 
 * <https://github.com/dhylands/drone-weact-blinky>
