@@ -1,4 +1,5 @@
-<span class="f4 b">$</span> <span class="f9">just features=heaptrace flash</span>
+<span class="f4 b">$</span> # uncomment `trace_port` option in `src/lib.rs`
+<hr /><span class="f4 b">$</span> <span class="f9">just flash</span>
 <hr /><span class="f4 b">$</span> <span class="f9">just heaptrace</span>
 <hr /><span class="f9">^C</span>
 <span class="f4 b">$</span> <span class="f9">drone heap generate --pools 8</span>
@@ -16,7 +17,7 @@
 Maximum heap load: <span class="b">651 / 1.99%</span>
 
 <span class="f6 b">=============================== OPTIMIZED LAYOUT ===============================</span>
-[heap]
+[heap.main]
 size = "32K"
 pools = [
     { block = "4", capacity = 522 },
